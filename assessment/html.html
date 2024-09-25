@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            background-color: rgba(91, 108, 108, 0.533);
+        }
+
+        .r {
+            background-color: green
+        }
+    </style>
+</head>
+
+<body>
+
+<table style="background-color: gray;">
+    <form>
+
+        <div id="main">
+            <div>
+                <tr>
+                    <td>
+                        <label for="r">frist name</label>
+                    </td>
+                    <td>
+                        <input type="text"  pattern="[a-zA-Z]{5,8}"   placeholder="frist-name" id="r" required >
+                    </td>
+                </tr>
+            </div>
+            <div>
+
+
+
+                <tr>
+                    <td>
+                        <label for="a">last-name</label>
+                    </td>
+                    <td>
+                        <input type="text" pattern="[a-zA-Z]{5,8}"  placeholder="last name" id="a" required  >
+                    </td>
+                </tr>
+            </div>
+            <div>
+
+                <tr>
+                    <td>
+                        <label for="a">Mail </label>
+                    </td>
+
+                    <td>
+                        <input type="email" pattern="[a-zA-Z.$]+@+[a-zA-z]+.+[a-zA-Z]{2,3}$" id="a" placeholder="it shoud cantain@.." required >
+                    </td>
+
+                </tr>
+            </div>
+            <div>
+
+
+                <tr>
+
+                    <td>
+                        <label for="" Gender> Gender</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="a">Male
+                        <input type="radio" name="a"> female
+                    </td>
+                </tr>
+            </div>
+            <div>
+
+                <tr>
+                    <td>
+                        <label for="">Date of Birth:</label>
+                    </td>
+                    <td>
+                        <input type="date">
+                    </td>
+                </tr>
+            </div>
+            <div>
+
+                <tr>
+                    <td>
+                        <label for="h">Address</label>
+                    </td>
+                    <td>
+                        <textarea id="" cols="30" rows="10"></textarea>
+
+                    </td>
+                </tr>
+            </div>
+            <div>
+
+                <tr>
+                    <td>
+                        <label for="k">city</label>
+                    </td>
+                    <td>
+                        <input type="text" id="k">
+                    </td>
+                </tr>
+            </div>
+            <div>
+
+                <tr>
+                    <td>
+                        <label for="q">state</label>
+                    </td>
+                    <td><input type="text" id="q"></td>
+
+                </tr>
+            </div>
+            <div>
+                <tr>
+                    <td>
+                        <label for="x">area pin</label>
+                    </td>
+                    <td>
+                        <input type="text" name="x" id="x">
+                    </td>
+                </tr>
+
+            </div>
+            <div>
+
+                <tr>
+                    <td>
+                        <label for=>Specilaization</label>
+                    </td>
+                    <td>
+                        <input type="checkbox">computer science <br>
+                        <input type="checkbox">information Technology <br>
+                        <input type="checkbox"> computer Architrcture <br>
+                        <input type="checkbox">Tele communicaton
+                    </td>
+                </tr>
+            </div>
+            <div>
+
+                <tr>
+                    <td>
+                        <label for="w">passwrord</label>
+                    </td>
+                    <td>
+                        <input type="password" id="w">
+                    </td>
+                </tr>
+            </div>
+            <div >
+
+                <tr>
+                    <td>
+                    
+                        <button type="submit">Registration</button>
+
+                    </td>
+
+                </tr>
+            </div>
+        </div>
+
+    </form>
+
+</table>
+
+</body>
+
+</html>
