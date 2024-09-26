@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        #main {
+            background-color: rgba(91, 108, 108, 0.533);
+            padding: 20px;
+            margin: auto;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-group input {
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form novalidate>
+
+        <div id="main">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" pattern="[a-zA-Z]{5,8}" placeholder="First Name" id="first-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" pattern="[a-zA-Z]{5,8}" placeholder="Last Name" id="last-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}" id="email" placeholder="example@domain.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" name="gender" value="male" required> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" cols="30" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pin">Area Pin</label>
+                <input type="text" name="pin" id="pin" required>
+            </div>
+
+            <div class="form-group">
+                <label>Specialization</label>
+                <div>
+                    <input type="checkbox" name="specialization" value="computer-science"> Computer Science <br>
+                    <input type="checkbox" name="specialization" value="information-technology"> Information Technology <br>
+                    <input type="checkbox" name="specialization" value="computer-architecture"> Computer Architecture <br>
+                    <input type="checkbox" name="specialization" value="telecommunication"> Telecommunication
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
