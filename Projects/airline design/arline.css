@@ -1,0 +1,256 @@
+* {
+    margin: 2px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav {
+    background: url("/black wallpaper.jpg");
+    background-size: cover; 
+    background-position: center;  
+}
+
+.nav h1{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+
+    margin-left: 120px;
+    padding: 0 10PX ;
+    padding-top: 10px;
+    font-family: "Roboto Slab", serif;
+
+}
+  .icon{
+    
+    color: white;
+    margin-left: 1000px;
+    padding: 0 10px;
+
+}
+.nav ul{
+    margin-left: 750px;
+    padding: 0 10px;
+    gap: 20px;
+    font-family: "EB Garamond", serif;
+    
+   
+}
+
+
+.nav li{
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+
+
+
+}
+.nav ul  li:hover{
+    background-color: rgba(111, 107, 107, 0.7);
+
+}
+
+@media (max-width: 768px) {
+    .nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .nav h1 {
+        font-size: 40px;
+        margin-left: 20px;
+        
+    }
+    }
+    /* navbar ends */
+
+
+
+.main{
+
+    width: 80%;
+    margin-top: -2px;
+    margin-left: 140px;
+    background: url("/Wall\ Mural\ -\ Clear\ Sight\ -\ PHOTO.jpg");
+    padding: 60px 20px;
+    
+   
+}
+.h1{
+    font-size: 30px;
+    font-weight: 10 0px  ;
+    color: rgb(247, 247, 247);
+    padding: 10px 10px;
+    margin-left: 390px;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+.lorm{
+    padding: 20px px;
+     margin-left: 10px;
+    width: 60%;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    
+
+}
+@media (max-width: 768px) {
+    .main {
+        width: 90%;
+        padding: 30px;
+        margin-left: 15px;
+    }
+
+    .h1 {
+        font-size: 20PX;
+        margin-left: 2px;
+        font-size: 20px;
+    }
+
+    .lorm {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .gray {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        left: -125px;
+
+        right: 0;
+    }
+}
+.gray{
+    text-align: center;
+    width: 350px;
+    padding: 20px;
+    background: url("/ofwhite.jpeg.jpg");
+    margin-left: 135px;
+    margin-top: -2px;
+    color:black;
+ }
+
+.sidebar h3{
+    color: black;
+    font-size: 1.8rem;
+    padding: 10px 0;
+    
+}
+.radio{
+    margin: 18px 0;
+    padding: 0 50px;
+    
+    
+}
+@media (max-width: 768px) {
+    .radio {
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+
+    .a {
+        margin-left: 0;
+    }
+
+    input {
+        padding: 12px;
+    }
+}
+.a{
+  margin-left: 50px;
+
+}
+ .sidebar .news{
+ margin: 20px;   
+ padding: 30px 0;
+}
+.welcome{
+    margin-left: 530px;
+    margin-top: -720px;
+}
+.p{
+    width: 55%;
+    padding: 20px 0;
+    color: rgb(83, 83, 214);
+}
+.more{
+    background-color: gray;
+    margin-left: 250px;
+    
+
+}
+.feet{
+   background-color: gray;
+  margin-left: 250px;
+    
+
+ 
+}
+@media (max-width: 768px) {
+    .welcome {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .p {
+        width: 100%;
+    }
+    .lorem{
+        display: none;
+    }
+
+    .more, .feet {
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px 20px;
+    }
+}
+
+.over{
+    width: 50%;
+   
+}
+.lorem{
+    background: url("/skyblue.jpeg.jpg");
+    width: 20%;
+    margin-left: 400px;
+    margin-top: -260px;
+    padding: 20px 20px;
+   
+}
+.nemo{
+    padding-top: 10PX;
+    padding-bottom: 10PX;
+    padding: 5PX 0;
+}
+.fot{
+    background: url("/black\ wallpaper.jpg");
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px 20px;
+}
+.fot h1::first-letter{
+    color: skyblue;
+}
+.fot h1{
+    border: 1px;
+}
+@media (max-width: 768px) {
+    .fot {
+        padding: 30px 20px;
+    }
+
+    .fot h1 {
+        font-size: 20px;
+    }
+}
+
