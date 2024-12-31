@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking Form</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            width: 300px;
+            margin: auto;
+        }
+        label, select, input, button {
+            width: 100%;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Restaurant Booking Form</h2>
+    <form id="bookingForm">
+        
+        <label for="bookingChoice">Choice of Booking:</label>
+        <select id="bookingChoice" name="bookingChoice" onchange="updateForm()">
+            <option value="fullDay">Full day booking</option>
+            <option value="halfDay">Half day booking</option>
+            <option value="hourly">Hourly booking</option>
+        </select>
+        <br><br>
+
+        
+        <label for="userName">User Name:</label>
+        <input type="text" id="userName" name="userName" required>
+        <br><br>
+
+    
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" required>
+        <br><br>
+
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        
+        <label for="numOfPersons">Number of Persons:</label>
+        <input type="number" id="numOfPersons" name="numOfPersons" required>
+        <br><br>
+
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        
+        <div id="timeDiv" class="hidden">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time">
+            <br><br>
+        </div>
+
+        
+        <div id="slotDiv" class="hidden">
+            <label for="slot">Slot:</label>
+            <select id="slot" name="slot">
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+            <br><br>
+        </div>
+
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        
+        function updateForm() {
+            const bookingChoice = document.getElementById("bookingChoice").value;
+            const timeDiv = document.getElementById("timeDiv");
+            const slotDiv = document.getElementById("slotDiv");
+            const dateInput = document.getElementById("date");
+
+          
+            timeDiv.classList.add("hidden");
+            slotDiv.classList.add("hidden");
+            dateInput.disabled = false;
+
+            
+            if (bookingChoice === "fullDay") {
+                slotDiv.classList.add("hidden");
+                timeDiv.classList.add("hidden");
+
+            } else if (bookingChoice === "halfDay") {
+                
+                slotDiv.classList.remove("hidden");
+                timeDiv.classList.add("hidden");
+            } else if (bookingChoice === "hourly") {
+                
+                slotDiv.classList.add("hidden");
+                timeDiv.classList.remove("hidden");
+            }
+        }
+
+        
+        window.onload = updateForm;
+
+        document.getElementById("bookingForm").onsubmit = function(event) {
+            event.preventDefault();  
+
+            
+            const formData = {
+                name: document.getElementById("userName").value,
+                mobile: document.getElementById("mobileNumber").value,
+                email: document.getElementById("email").value,
+                numOfPersons: document.getElementById("numOfPersons").value,
+                date: document.getElementById("date").value,
+                time: document.getElementById("time").value,
+                slot: document.getElementById("slot") ? document.getElementById("slot").value : null,
+                bookingChoice: document.getElementById("bookingChoice").value
+            };
+
+            
+            alert("Booking Details: " + JSON.stringify(formData, null, 2));
+        };
+    </script>
+
+</body>
+</html>
