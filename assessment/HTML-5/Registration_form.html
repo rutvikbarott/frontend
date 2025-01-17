@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        h1 {
+            color: rgba(100, 145, 190, 0.5);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form action="" method="GET">
+        <table align="center">
+            <tr>
+                <td>
+                    <label for="fname">First Name</label><br>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lname">Last Name</label><br>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mobile">Mobile</label><br>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number (10 digits)" pattern="[0-9]{10}" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Gender</label><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Date of Birth:</label><br>
+                    <input type="date" id="dob" name="dob" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address">Address</label><br>
+                    <textarea id="address" name="address" rows="4" cols="30" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="city">City</label><br>
+                    <input type="text" id="city" name="city" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="state">State</label><br>
+                    <input type="text" id="state" name="state" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pin">Area Pin</label><br>
+                    <input type="text" id="pin" name="pin" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="qualification">Qualification:</label><br>
+                    <select id="qualification" name="qualification" required>
+                        <option value="" disabled selected>--- Select your Qualification ---</option>
+                        <option value="computer_science">Computer Science</option>
+                        <option value="information_technology">Information Technology</option>
+                        <option value="computer_architecture">Computer Architecture</option>
+                        <option value="telecommunication">Telecommunication</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" name="password" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Register</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('fname') && urlParams.has('lname')) {
+            alert('Form submitted with the following data:\n' +
+                'First Name: ' + urlParams.get('fname') + '\n' +
+                'Last Name: ' + urlParams.get('lname'));
+        }
+    </script>
+</body>
+
+</html>
