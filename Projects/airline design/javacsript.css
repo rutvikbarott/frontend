@@ -8,16 +8,15 @@
 .nav {
     
     background: url("/black\ wallpaper.jpg");
-    
-
+    width: 100%;
     background-size: cover; 
-    background-position: center;  
+    /* background-position: center;   */
 }
 
 .nav h1{
     color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    margin-left: 120px;
+    font-size: 2.0rem;
+    margin-left: 100px;
     padding: 0 10PX ;
     padding-top: 10px;
     font-family: "Roboto Slab", serif;
@@ -31,9 +30,10 @@
 
 }
 .nav ul{
+    width: 100%;
     margin-left: 750px;
     padding: 0 10px;
-    gap: 20px;
+    gap: 10px;
     font-family: "EB Garamond", serif;
     
    
@@ -181,7 +181,7 @@
 }
 .welcome{
     margin-left: 530px;
-    margin-top: -970px;
+    margin-top: -720px;
 }
 .p{
     width: 55%;
@@ -228,9 +228,10 @@
 .lorem{
     
     background: url("/skyblue.jpeg.jpg");
+
     width: 20%;
-    margin-left: 450px;
-    margin-top: -700px;
+    margin-left: 400px;
+    margin-top: -260px;
     padding: 20px 20px;
    
 }
@@ -241,7 +242,7 @@
 }
 .fot{
     background: url("/black\ wallpaper.jpg");
-margin-top: 300px;
+
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 40px 20px;
@@ -261,110 +262,89 @@ margin-top: 300px;
         font-size: 20px;
     }
 }
-/* Main Container */
-.container {
-    max-width: 100%;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Carousel Styles */
-.carousel {
+body {
+    font-family: Arial, sans-serif;
+}
+
+.slider-container {
     position: relative;
-    width: 60%;
-    height: 500px;
-    /* height: 500px; */
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
-    margin: auto;
 }
 
-.carousel-inner {
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+}
+
+.slide img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.carousel-item {
-    height: 100%;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Makes sure the images cover the entire carousel without distorting */
-}
-
-/* Caption Styles */
-.carousel-caption {
+.caption {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for readability */
+    text-align: center;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.carousel-caption h5 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 100;
 }
 
-.carousel-caption p {
-    font-size: 1.1rem;
-    margin-top: 10px;
-    line-height: 1.5;
+.prev {
+    left: 10px;
+    transform: translateY(-50%);
 }
 
-/* Indicators (the dots) */
-.carousel-indicators button {
-    background-color: #fff; /* White color for active and inactive dots */
-    border: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin: 0 5px;
-    transition: background-color 0.3s ease;
+.next {
+    right: 10px;
+    transform: translateY(-50%);
 }
 
-.carousel-indicators .active {
-    background-color: #007bff; /* Blue color for the active dot */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Control Buttons (Previous & Next) */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for control buttons */
-    border-radius: 50%;
+/* Optional: Add fade effect for smooth transitions */
+.slider .slide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    background-color: transparent;
-    border: none;
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.3); /* Darker hover effect */
-}
-
-/* Adjustments for Smaller Screens */
-@media (max-width: 767px) {
-    .carousel-caption {
-        font-size: 1rem;
-        padding: 15px;
-        bottom: 10px;
-    }
-
-    .carousel-caption h5 {
-        font-size: 1.8rem;
-    }
-
-    .carousel-caption p {
-        font-size: 0.9rem;
-    }
+.slider .slide.active {
+    opacity: 1;
 }

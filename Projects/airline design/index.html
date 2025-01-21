@@ -10,14 +10,21 @@
     <title>Airlines - International Travel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/arline.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <div class="container">
         <div class="nav">
             <h1> <span style="color: skyblue;">AIR</span> LINES <br> INTERNATIONAL TRAVEL </h1>
@@ -39,6 +46,53 @@
             </ul>
 
 
+        </div>
+    </div>
+
+
+    <div class="slider">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/Aircraft photography - Airbus A318-112CJ (Elite).jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/b980c9a7-b5ab-4d41-9820-c1bc8e739f9b.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/Introducing Gulfsteam’s Two All-New Business Jets.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
     <div class="main">
@@ -65,12 +119,12 @@
                 <input type="radio" name="a">One Way
                 <input type="radio" name="a">Multi-Leg
             </div>
-
-            <form class="a" action="">
+        
+            <form name="flightForm" action="#" onsubmit="return validateForm()">
                 <table>
                     <tr>
                         <td>
-                            <label for="a">Leaveing From</label>
+                            <label for="a">Leaving From</label>
                             <br>
                             <input style="box-shadow: 0 0 1px 0;" type="text" name="a"
                                 placeholder="enter city or airport code">
@@ -86,18 +140,18 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="c"> Departure Date and Time</label>
+                            <label for="c">Departure Date and Time</label>
                             <br>
-                            <input style="box-shadow: 0 0 1px 0;" type="date">
-                            <input style="box-shadow: 0 0 1px 0;" type="time" placeholder="12pm" name="c">
+                            <input style="box-shadow: 0 0 1px 0;" type="date" name="c">
+                            <input style="box-shadow: 0 0 1px 0;" type="time" placeholder="12pm" name="d">
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="d"> Return Date and Time</label>
+                            <label for="d">Return Date and Time</label>
                             <br>
-                            <input style="box-shadow: 0 0 1px 0;" type="date">
-                            <input style="box-shadow: 0 0 1px 0;" type="time" placeholder="12pm" name="d">
+                            <input style="box-shadow: 0 0 1px 0;" type="date" name="d">
+                            <input style="box-shadow: 0 0 1px 0;" type="time" placeholder="12pm" name="e">
                         </td>
                     </tr>
                     <tr>
@@ -105,11 +159,12 @@
                             <label for="e">Passenger(s):</label>
                             <br>
                             <input style="box-shadow: 0 0 2px 0;" type="text" placeholder="#passengers" name="e">
-                            <button style="background-color:rgb(83, 83, 214); padding: 8px;">GO!</button>
+                            <button type="submit" style="background-color:rgb(83, 83, 214); padding: 8px;">GO!</button>
                         </td>
                     </tr>
                 </table>
             </form>
+        
             <div class="news">
                 <h1 style="padding: 5px 0;">Recent News</h1>
                 <p style=" color: rgb(83, 83, 214);">Nemo enim ipsam volaptatem quia </p>
@@ -122,11 +177,12 @@
                 </div>
                 <div class="nemo">
                     <p style=" color: rgb(83, 83, 214);">Nemo enim ipsam volaptatem quia </p>
-                    <p style="padding: 5px 0;">october 23,2010</p>
+                    <p style="padding: 5px 0;">October 23,2010</p>
                     <hr>
                 </div>
             </div>
         </div>
+        
 
 
         <div class="welcome">
@@ -209,6 +265,68 @@
 
 
     </div>
+    
+        <script>
+    function validateForm() {
+        // Get all the input values
+        var leavingFrom = document.forms["flightForm"]["a"].value;
+        var goingTo = document.forms["flightForm"]["b"].value;
+        var departureDate = document.forms["flightForm"]["c"].value;
+        var returnDate = document.forms["flightForm"]["d"].value;
+        var passengers = document.forms["flightForm"]["e"].value;
+        var radioSelected = false;
+
+        // Check if at least one radio button is selected
+        var radios = document.getElementsByName("a");
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                radioSelected = true;
+                break;
+            }
+        }
+
+        // Validation for 'Leaving From' field
+        if (leavingFrom == "") {
+            alert("Please enter the 'Leaving From' city or airport code.");
+            return false;
+        }
+
+        // Validation for 'Going To' field
+        if (goingTo == "") {
+            alert("Please enter the 'Going To' city or airport code.");
+            return false;
+        }
+
+        // Validation for 'Departure Date and Time'
+        if (departureDate == "") {
+            alert("Please select a departure date.");
+            return false;
+        }
+
+        // Validation for 'Return Date and Time'
+        if (returnDate == "") {
+            alert("Please select a return date.");
+            return false;
+        }
+
+        // Validation for 'Passengers' field
+        if (passengers == "" || isNaN(passengers) || passengers <= 0) {
+            alert("Please enter a valid number of passengers.");
+            return false;
+        }
+
+        // Check if a radio button is selected for flight type
+        if (!radioSelected) {
+            alert("Please select a flight type (Round up, Empty-Leg, One Way, Multi-Leg).");
+            return false;
+        }
+
+        // If all validations pass, the form can be submitted
+        return true;
+    }
+</script>
+
+    
 
 </body>
 
