@@ -8,6 +8,8 @@
 .nav {
     
     background: url("/black\ wallpaper.jpg");
+    background: url("/airline design/black\ wallpaper.jpg");
+
     
 
     background-size: cover; 
@@ -80,6 +82,8 @@
     margin-top: -2px;
     margin-left: 140px;
     background: url("/aircraft.jpeg.jpg");
+    background: url("/airline design/aircraft.jpeg.jpg");
+
     /* background: url("/aircraft.jpeg.jpg"); */
 
 
@@ -139,6 +143,8 @@
     width: 350px;
     padding: 20px;
     background: url("/ofwhite.jpeg.jpg");
+    background: url("/airline design/ofwhite.jpeg.jpg");
+
 
     margin-left: 135px;
     margin-top: -2px;
@@ -228,6 +234,8 @@
 .lorem{
     
     background: url("/skyblue.jpeg.jpg");
+    background: url("/airline design/skyblue.jpeg.jpg");
+
     width: 20%;
     margin-left: 450px;
     margin-top: -700px;
@@ -241,6 +249,8 @@
 }
 .fot{
     background: url("/black\ wallpaper.jpg");
+    background: url("/airline design/black\ wallpaper.jpg");
+
 margin-top: 300px;
     color: rgb(255, 255, 255);
     text-align: center;
